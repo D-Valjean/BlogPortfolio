@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+{% for p in post %}
+<div class="text-center">
+    <h2>{{p.title}}</h2>
+    <h3 class="my-2 h5 text-muted">{{p.date|date:'F jS Y'}}</h3>
+    <img src="{{p.image.url}}" alt="{{p.title}}" class="img-fluid">
+    <div class="my-4">
+        <p>{{p.description|safe}}</p>
+    </div>
+</div>
+    
+{% endfor %}
+{% endblock %}

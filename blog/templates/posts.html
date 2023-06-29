@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<h1>post</h1>
+
+{% for p in post %}
+<div class="p-3">  
+    <div class="card-body bg-black">
+        <div class="row">
+            <div class="col-3">
+                <img src="{{p.image.url}}" alt="{{p.title}}" class="img-fluid">
+            </div>
+            <div class="col-9">
+                <h2>{{p.title}}</h2>
+                <!-- |safe|truncatechars son parametros para formatear en la vista -->
+                <p>{{p.description|safe|truncatechars:100}}</p>
+                <h3>{{p.date|date:'M d Y'|upper}}</h3>
+                <a href="{% url 'blog:post_detail' p.id %}" class="btn btn-primary">{{p.title}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
