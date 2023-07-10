@@ -1,13 +1,22 @@
-body{
-    background: #090909;
+body {
+    background: #0E0C0C;
 }
 
 
-.bg-black{
-    background: #090909;
+.bg-black {
+    background: #0E0C0C;
 }
 
-.card-project:hover{
+.card-project:hover {
     border: 1px solid #fff;
     cursor: pointer;
+}
+
+
+.contacto .whatsapp {
+    background: #1ca144
+}
+
+.contacto .whatsapp:hover {
+    background: #4e9b65
 }

@@ -3,42 +3,61 @@
 
 {% block content %}
 
-<header class="row bg-black"> 
-    <div class="col-md-4" >
-        <img src="{% static 'portfolio/profile.jpeg' %}" alt="">
+<header class="row bg-black">
+    <style>
+        img {
+            border-radius: 25px;
+        }
+    </style>
+    <div class="col-md-4">
+        <img src="{% static 'portfolio/profile.png' %}" alt="Profile" width="350" height="500">
     </div>
 
-    <div class="col-md-8 my-auto" >
+    <div class="col-md-8 my-auto">
         <h1>Im <strong>Programing</strong></h1>
         <h3>i am Python full stack</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, qui dolorem! Quaerat repellendus illo corrupti provident consectetur qui, doloribus ipsam, quos reiciendis officiis consequatur deleniti vel similique at quae cum?</p>
-        <a href="{% static 'portfolio/cv.pdf' %}" class="btn btn-primary btn-lg rounded-0 my-3" target="_blank" >Download CV</a>
+        <p>Ing. en Sistemas con mas de 5 años de experiencia.
+            He trabajado en empresas de diferentes sectores, lo que me ha brindado una amplia visión de las necesidades
+            y desafíos que enfrenta el área IT.
+            Siento pasión por seguir aprendiendo y manteniéndome actualizado sobre las últimas tendencias en tecnología.
+            Mi objetivo es crecer profesionalmente en el campo del Back-End y contribuir de manera significativa
+            en el desarrollo de proyectos.
+
+        </p>
+        <a href="{% static 'portfolio/CV_Alex.pdf' %}" class="btn btn-primary btn-lg rounded-0 my-3"
+            target="_blank">Curriculum IT
+        </a>
+        <a href="{% static 'portfolio/EF.pdf' %}" class="btn btn-primary btn-lg rounded-0 my-3"
+            target="_blank">Certificado EF
+        </a>
     </div>
 
 </header>
 
+<hr>
 
 <div class="row my-4 text-center">
-    <h3>My projects</h3>
+    <h3>Mis Proyectos</h3>
 
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In mollitia explicabo dolore quo ipsum inventore veritatis blanditiis, rerum accusantium! Qui harum molestias officiis distinctio ut nulla facere, impedit est iste!</p>
+    <p>Dirrecion de mi Cuenta de Github junto a mis ultimos proyectos que han entrado a Produccion</p>
 
     {% for p in project %}
 
     <div class="col-md-4 p-4">
         <div class="card bg-black card-project">
             <img src="{{p.image.url}}" alt="{{p.title}}" class="card-img-top" />
-            <div class="card-body">                    
-                <h2>{{p.title}}</h2>    <p>{{p.description}}</p>
+            <div class="card-body">
+                <h2>{{p.title}}</h2>
+                <p>{{p.description}}</p>
                 {% if p.url %}
-                    <a href="{{p.url}}" class="btn btn-light rounded-0 btn-sm" target="_blank">{{p.url}}</a>
+                <a href="{{p.url}}" class="btn btn-light rounded-0 btn-sm" target="_blank">{{p.url}}</a>
                 {% endif %}
             </div>
         </div>
-        
+
     </div>
-    
+
     {% endfor %}
     {% endblock %}
 </div>

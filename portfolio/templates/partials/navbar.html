@@ -1,12 +1,14 @@
 {% load static %}
 <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="/">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'blog:post' %}">Blog</a>
-    </li>
-    <li class="nav-item d-flex align-items-center">
-      <a class="btn btn-primary btn-sm" href="{% static 'portfolio/cv.pdf' %}" target="_blank">Download CV</a>
-    </li>
-  </ul>
+  <li class="nav-item">
+    <!-- <a class="nav-link active" aria-current="page" href="/">Home</a> -->
+  </li>
+  <li class="nav-item">
+    <!-- <a class="nav-link" href="{% url 'blog:post' %}">Blog</a> -->
+  </li>
+  <li class="nav-item d-flex align-items-center">
+    <a class="btn btn-primary btn-sm"
+      href="https://api.whatsapp.com/send?phone=%2B584265963368&text='Saludos, le estamos contactando de parte de la Empresa: '"
+      target="_blank">Contactarme por Whatsapp</a>
+  </li>
+</ul>
